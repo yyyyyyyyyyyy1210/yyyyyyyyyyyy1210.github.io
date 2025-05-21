@@ -14,6 +14,7 @@
     <ul>
       <li><a href="index.html">Front page</a></li>
       <li><a href="teachable.html" class="active">Teachable Machine</a></li>
+      <li><a href="final.html">Final Project</a></li>
     </ul>
   </nav>
 
@@ -24,10 +25,31 @@
   </header>
 
   <main>
-    <div class="project-container">
-      <button type="button" onclick="init()" class="kawaii-button">開始偵測</button>
-      <div id="webcam-container"></div>
-      <div id="label-container"></div>
+    <div class="teachable-container">
+      <div class="description-box" style="background: #f7dad9;">
+        <h2>✨ AI 影像辨識模型 ✨</h2>
+        <p>這是一個使用 Teachable Machine 訓練的影像辨識模型！<br>
+        可以用來偵測史努比跟水壺！<br>
+        點擊下方按鈕開始體驗即時影像辨識功能～<br>
+        讓我們一起來玩玩看吧！(*´∀`)~♥</p>
+      </div>
+      
+      <div style="text-align: center; margin: 2rem 0;">
+        <button type="button" onclick="init()" class="kawaii-button" style="background: #d6d2c4; padding: 1.2rem 2.5rem; font-size: 1.2rem;">開始偵測 ✨</button>
+      </div>
+      
+      <div class="demo-container">
+        <div id="webcam-container"></div>
+        <div id="label-container"></div>
+      </div>
+      
+      <div class="code-preview" style="background: #f7dad9;">
+        <img src="attached_assets/tea.png" alt="Code preview">
+        <p style="text-align: center; margin-top: 1.5rem; line-height: 1.6;">
+          這是我練習操作Teachable Machine 的過程<br>
+          前後試過了許多不同的東西讓模型偵測，並學習調整信心程度讓模型更加有變化！
+        </p>
+      </div>
     </div>
   </main>
 

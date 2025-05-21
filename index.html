@@ -2,10 +2,22 @@
 <html lang="zh">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>⋆͛♥︎⋆My Portfolio⋆͛♥︎⋆</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <audio id="bgMusic" preload="auto">
+    <source src="attached_assets/bgm.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- 引用思源黑體字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Han+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- 引用 BD Super 字體 -->
   <link href="https://fonts.cdnfonts.com/css/bd-super" rel="stylesheet">
+  <!-- 引用 Noto Sans TC 字體 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <!-- 引用 Huninn 字體 -->
+  <link href="https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@1.1/huninn.css" rel="stylesheet">
+
+  <!-- 引入內部 CSS -->
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -13,22 +25,23 @@
     <ul>
       <li><a href="index.html" class="active">Front page</a></li>
       <li><a href="teachable.html">Teachable Machine</a></li>
+      <li><a href="final.html">Final Project</a></li>
     </ul>
   </nav>
 
   <header>
     <div class="kawaii-header">
-      <h1>⋆͛♥︎⋆My Portfolio⋆͛♥︎⋆</h1>
+      <h1 class="typing-text">⋆͛♥︎⋆My Portfolio⋆͛♥︎⋆</h1>
     </div>
   </header>
 
   <main>
     <section class="about-me">
-      <h2>//About Me//</h2>
+      <h2>/ABOUT ME/</h2>
       <div class="profile-container">
         <div class="profile-pic"></div>
         <div class="profile-content">
-          <p>Hello！！我是王于晏Yumi！是一位富有天馬行空想法有趣的大學生！
+          <p>Hello！！我是王于晏Yumi！是一位富有天馬行空想法有趣的大學生！<br>
           目前就讀台灣科技大學企管系三年級，歡迎欣賞我的作品集*´∀*</p>
           <p>★樂於嘗試新事物、對於藝術創作充滿熱情、擅長剪輯影片及製圖★</p>
           <p>台灣科技大學企業管理系｜企管系系學會活動｜高中大眾傳播社社長</p>
@@ -36,23 +49,50 @@
       </div>
     </section>
 
-    <section class="image-gallery">
-      <h2>//Image Gallery//</h2>
+    <section class="portfolio-intro">
+      <h2>/作品集網頁介紹/</h2>
+      <div class="intro-container">
+        <div class="intro-image">
+          <img src="attached_assets/螢幕擷取畫面 2025-05-14 160947.png" alt="AI Portfolio Introduction">
+        </div>
+        <div class="intro-content">
+          <p>這個作品集網頁展示了我在AI人工智慧課程中的學習成果，包含了：</p>
+          <ul>
+            <li>✨ AI protfolio gallery</li>
+            <li>✨ Teachable Machine</li>
+            <li>✨ Final Project</li>
+          </ul>
+          <p>透過這些專案，我學習到如何運用現代AI技術來開發實用的應用程式，並體驗到如何在生活中和AI共存、創造更大的價值。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="AI protfolio gallery">
+      <h2>/AI protfolio gallery/</h2>
+      <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
+        這裡展示了我在AI人工智慧課程中完成的三個特別喜歡的專案作品，包含了人臉辨識、手勢辨識以及其他有趣的應用！歡迎點擊圖片看看我的課程學習心得呦~
+      </p>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="attached_assets/螢幕擷取畫面 2025-03-05 094231.png" alt="Gallery Image 1">
+          <a href="gallery1.html">
+            <img src="attached_assets/螢幕擷取畫面 2025-03-05 094231.png" alt="Gallery Image 1">
+          </a>
         </div>
         <div class="gallery-item">
-          <img src="attached_assets/螢幕擷取畫面 2025-03-12 110723.png" alt="Gallery Image 2">
+          <a href="gallery2.html">
+            <img src="attached_assets/螢幕擷取畫面 2025-03-12 110723.png" alt="Gallery Image 2">
+          </a>
         </div>
         <div class="gallery-item">
-          <img src="attached_assets/螢幕擷取畫面 2025-03-19 103531.png" alt="Gallery Image 3">
+          <a href="gallery3.html">
+            <img src="attached_assets/螢幕擷取畫面 2025-03-19 103531.png" alt="Gallery Image 3">
+          </a>
         </div>
       </div>
     </section>
 
     <section class="contact">
-      <h2>Contact Me⌯>ᴗo⌯ಣ</h2>
+      <h2>Contact Me⌯>ᴗo⌯</h2>
       <div class="contact-form">
         <input type="email" placeholder="Your Email">
         <textarea placeholder="Something you want to say to me:"></textarea>

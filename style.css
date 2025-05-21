@@ -1,12 +1,14 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css');
+
 body {
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'cwTeXFangsong', 'ZCOOL XiaoWei', 'Source Han Sans', sans-serif;
   background-color: #FFF5E6;
   color: #4A4A4A;
 }
@@ -37,22 +39,91 @@ body {
   background-color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .nav-bar ul {
+    justify-content: center;
+    gap: 1rem;
+    margin-right: 0;
+    padding: 0 1rem;
+  }
+  
+  .nav-bar a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .kawaii-header h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .intro-container {
+    flex-direction: column;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .motivation-content {
+    flex-direction: column;
+  }
+  
+  .motivation-images {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+  
+  .page-section {
+    flex-direction: column !important;
+  }
+  
+  .page-section .page-image {
+    margin-bottom: 1rem;
+  }
+  
+  .project-description, 
+  .project-motivation {
+    padding: 1.5rem;
+  }
+  
+  .contact-form {
+    padding: 0 1rem;
+  }
+}
+
 .nav-bar a.active {
   background-color: #B73E3E;
   color: white;
 }
 
 .kawaii-header {
-  background-color: #FFD6D6;
+  background: linear-gradient(-45deg, #FFD6D6, #FFB7B7, #FFE2E2, #FFC9C9);
+  background-size: 400% 400%;
   padding: 2rem;
   text-align: center;
   margin-top: 60px;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .kawaii-header h1 {
-  color: #B73E3E;
-  font-family: 'BD Super', sans-serif;
-  font-size: 2.5rem;
+  color: transparent;
+  background: linear-gradient(90deg, #8b0000, #b22222); /* 深紅色漸層 */
+  -webkit-background-clip: text;
+  font-family: 'cwTeXFangsong', 'ZCOOL XiaoWei', sans-serif;
+  font-size: 3rem; /* 增大字體 */
+  font-weight: bold; /* 加粗字體 */
 }
 
 main {
@@ -66,6 +137,8 @@ h2 {
   text-align: center;
   font-size: 2rem;
   margin: 2rem 0;
+  font-family: 'Source Han Sans', sans-serif; /* 使用思源黑體字體 */
+  font-weight: bold; /* 加粗字體 */
 }
 
 .profile-container {
@@ -76,6 +149,101 @@ h2 {
   gap: 2rem;
   align-items: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in;
+  transition: transform 0.3s ease;
+}
+
+.profile-container:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-intro {
+  margin: 4rem 0;
+}
+
+.intro-container {
+  background: #f7dad9;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(255, 214, 231, 0.3);
+  animation: fadeIn 1s ease-in;
+}
+
+.intro-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.intro-image img {
+  width: 100%;
+  border-radius: 15px;
+  border: 5px solid white;
+  transition: transform 0.3s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+}
+
+.intro-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.intro-content h3 {
+  color: #B73E3E;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.intro-content li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #4A4A4A;
+}
+
+.intro-content p {
+  line-height: 1.6;
+  color: #4A4A4A;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item {
+  transition: transform 0.3s ease;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.kawaii-button {
+  transition: all 0.3s ease;
+  animation: fadeIn 2s ease-in;
+}
+
+.kawaii-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .profile-pic {
@@ -102,6 +270,26 @@ h2 {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  border: 3px solid #FFB7B7;
+  filter: brightness(1.1) contrast(1.1);
 }
 
 .contact {
@@ -109,8 +297,9 @@ h2 {
 }
 
 .contact h2 {
-  font-family: 'BD Super', sans-serif;
+  font-family: 'Source Han Sans', sans-serif; /* 使用思源黑體字體 */
   color: #4A4A4A;
+  font-weight: bold; /* 加粗字體 */
 }
 
 .contact-form {
@@ -134,36 +323,141 @@ h2 {
 }
 
 .kawaii-button {
-  background-color: #8EB695;
+  background: linear-gradient(45deg, #8EB695, #A5C7AC);
   color: white;
   border: none;
   padding: 1rem;
   border-radius: 10px;
   font-size: 1.1rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  background-size: 200% auto;
 }
 
-.project-container {
+.kawaii-button:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(142, 182, 149, 0.4);
+}
+
+.teachable-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.description-box {
+  animation: slideIn 0.8s ease-out;
+}
+
+.kawaii-button:hover {
+  animation: pulse 1s infinite;
+}
+
+#webcam-container {
+  transition: transform 0.3s ease;
+  animation: slideIn 1s ease-out;
+}
+
+#webcam-container:hover {
+  transform: scale(1.02);
+}
+
+#label-container {
+  animation: slideIn 1.2s ease-out;
+  transition: all 0.3s ease;
+}
+
+#label-container div {
+  padding: 10px;
+  margin: 5px 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#label-container div:hover {
+  transform: translateX(10px);
+  background: rgba(247, 218, 217, 0.9);
+}
+
+.description-box {
+  background: linear-gradient(135deg, #FFD6E7, #FFC9DE, #FFB7D5);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 183, 213, 0.3);
+}
+
+.description-box h2 {
+  color: #B73E3E;
+  margin-bottom: 1rem;
+}
+
+.description-box p {
+  color: #4A4A4A;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.demo-container {
+  background: linear-gradient(135deg, #E7F2FF, #D6E8FF, #C4DFFF);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 2rem;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(198, 223, 255, 0.3);
 }
 
 #webcam-container {
-  width: 200px;
-  height: 200px;
+  border: 5px solid white;
   border-radius: 10px;
   overflow: hidden;
 }
 
 #label-container {
-  font-size: 1.2rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
   text-align: center;
+}
+
+.code-preview {
+  background: linear-gradient(135deg, #FFE8D6, #FFD6C9, #FFC4B7);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 15px rgba(255, 196, 183, 0.3);
+}
+
+.code-preview img {
+  width: 100%;
+  border-radius: 10px;
+  border: 5px solid white;
 }
 
 footer {
@@ -172,4 +466,247 @@ footer {
   padding: 1rem;
   margin-top: 4rem;
   color: #4A4A4A;
+}
+
+.gallery-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-detail img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto 2rem;
+  display: block;
+  border: 10px solid #e7b8aa;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-description {
+  padding: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background-color: #ece0db;
+  color: #4A4A4A;
+}
+
+.gallery-description h2 {
+  background: transparent;
+  margin: -2rem -2rem 1rem -2rem;
+  padding: 1rem;
+}
+
+.final-project {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.project-preview {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #8EB695;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.project-link:hover {
+  background-color: #7da584;
+}
+
+
+<style>
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.project-image {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.project-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.project-description, .project-motivation {
+  background-color: #fef9ff;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  font-family: 'Noto Sans TC', 'Source Han Sans', sans-serif;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.highlight {
+  color: #ff0000;
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  color: #cc0000;
+}
+
+.motivation-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.motivation-images {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.motivation-images img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.motivation-images img:hover {
+  transform: scale(1.05);
+}
+
+.motivation-text {
+  flex: 1;
+}
+
+.motivation-text p {
+  margin-bottom: 1.5rem;
+}
+
+.motivation-text p:last-child {
+  margin-bottom: 0;
+}
+
+.project-pages {
+  margin: 4rem 0;
+}
+
+.page-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.page-section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.page-image {
+  flex: 1;
+}
+
+.page-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90vh;
+  margin: auto;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.page-description {
+  flex: 1;
+  padding: 1rem;
+}
+
+.page-description h3 {
+  color: #B73E3E;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.page-description p {
+  line-height: 1.6;
+  color: #4A4A4A;
+}
+
+.project-description:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.project-description p {
+  margin: 0;
+  white-space: pre-line;
+}
+</style>
+
+
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #B73E3E;
+  width: 0;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: typing 3.5s steps(40, end) forwards,
+             blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #B73E3E }
 }

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hand Gesture Detection</title>
+  <audio id="bgMusic" preload="auto">
+    <source src="attached_assets/bgm.mp3" type="audio/mp3">
+  </audio>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/bd-super" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="index.html">Front page</a></li>
+      <li><a href="teachable.html">Teachable Machine</a></li>
+      <li><a href="final.html">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="kawaii-header">
+      <h1>Hand Gesture Detection 👋</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="gallery-detail" id="gallery3">
+      <img src="attached_assets/螢幕擷取畫面 2025-03-19 103531.png" alt="Hand Gesture Detection">
+      <div class="gallery-description">
+        <h2>作品介紹</h2>
+        <div class="text-box">
+          <p>
+            這個系統的目標是即時偵測鏡頭前的手部狀態，並依照不同情境進行判斷 🎯<br><br>
+            目前可以辨識以下四種情況：<br><br>
+
+            🚫 <strong>No sign</strong>：如果畫面中完全沒有偵測到手，系統會顯示「No sign」，表示沒有人在比手勢，也可能手根本不在鏡頭裡。<br><br>
+
+            ✊ <strong>Zero</strong>：當使用者將手握拳、五指縮起來時，系統會辨識成「Zero」手勢。這是根據手指是否彎曲靠近掌心來判斷的。<br><br>
+
+            📱 <strong>Phone</strong>：若手靠近臉部、遮住嘴巴，或呈現像是在講電話的姿勢（例如手掌平貼臉側），系統會判定為「Holding phone」。<br><br>
+
+            🔑 <strong>Key</strong>：如果畫面中出現特定圖像特徵，系統會辨識為「Key」。這部分主要透過影像中是否出現鑰匙圖像來判定，而不是單純靠手部關鍵點。<br><br>
+
+            整體來說，這套系統是以 MediaPipe Hands 模型為基礎 🤖，透過手部關鍵點的空間位置與特定物體的影像資訊，來進行這四種簡單但實用的分類。<br><br>
+            
+            之後也能繼續擴充更多有趣的手勢或互動方式 ✨，像是比愛心 💝、拍手 👏、數數字 🔢 等等，非常適合互動式應用！
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2024 Made with ♡</p>
+  </footer>
+</body>
+</html>
